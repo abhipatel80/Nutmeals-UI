@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* common css start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  @apply bg-gray-100
+}
+
+.left-div {
+  @apply lg:ml-[-58px] 1xl:-ml-1 xl:ml-[-18px] large:ml-2 4xl:ml-[50px] 3xl:ml-[35px] 5xl:ml-[88px] 6xl:ml-48 5xl-lg:ml-32;
+}
+
+.right-div {
+  @apply lg:!mr-[-40px] 1xl:!mr-2.5 xl:!mr-[-10px] large:!mr-6 4xl:!mr-[62px] 3xl:!mr-[45px] 5xl:!mr-[100px] 6xl:!mr-[190px] 5xl-lg:!mr-32;
+}
+
+.left-div-navbar {
+  @apply lg:pl-[58px] 1xl:pl-[120px] xl:pl-[105px] large:pl-32 4xl:pl-[170px] 3xl:pl-[160px] 5xl:pl-[200px] 6xl:pl-[280px] 5xl-lg:pl-56;
+}
+
+.right-div-navbar {
+  @apply lg:!pr-[75px] 1xl:!pr-[130px] xl:!pr-[120px] large:!pr-36 4xl:!pr-[194px] 3xl:!pr-[178px] 5xl:!pr-[225px] 6xl:!pr-[305px] 5xl-lg:!pr-[245px];
+}
+
+/* common css end */
+
+/* hide scroll bar css start */
+.services-section::-webkit-scrollbar {
+  display: none;
+}
+
+.product-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+/* hide scroll bar css end */
+
+/* menu and links css start */
+.menu-hover {
+  @apply hover:text-[#F8A531] duration-200;
+}
+
+.link-hover {
+  @apply hover:bg-[#F8A531] rounded-md p-2 duration-200;
+}
+
+.icon-hover {
+  @apply hover:bg-[#F8A531] rounded-md w-9 px-2 duration-200;
+}
+
+.active {
+  @apply bg-[#faa61a] text-white duration-300 rounded-md py-1 px-4;
+}
+
+.icon-active {
+  @apply bg-[#faa61a] text-white duration-300 rounded-md py-2 px-2.5;
+}
+/* menu and links css end */
+
+/* input and checkbox css start */
+.checkbox {
+  accent-color: #faa61a;
+}
+
+.custom-input {
+  @apply border border-solid border-gray-400 py-2 px-4 sm:w-80 w-auto resize-none rounded-md;
+}
+
+.contact-input {
+  @apply border border-solid border-gray-400 py-2 px-4 w-auto resize-none rounded-md;
+}
+/* input and checkbox css end */
+
+/* homepage slider css start */
+.slide {
+  transform: translate3d(0px, -100%, 0px);
+  overflow: hidden;
+}
+/* homepage slider css end */
+
+/* auth page start */
+.auth input,
+.auth textarea {
+  @apply focus:border-[#F8A531] focus:text-[#F8A531] outline-none focus:placeholder:text-[#F8A531];
+}
+/* auth page end */
+
+/* pdp start */
+.nutrition li {
+  @apply text-[14px] 2xl:text-[16px] list-none;
+}
+
+.text-effect {
+  -webkit-text-stroke: 1px #faa61a;
+  text-stroke: 1px #faa61a;
+  @apply text-7xl font-bold m-auto text-white;
+}
+
+@keyframes blink {
+  0% {
+    color: #faa61a;
+  }
+  50% {
+    color: #000;
+  }
+  100% {
+    color: #faa61a;
+  }
+}
+
+.blink {
+  animation: blink 1.5s infinite ease-in-out;
+  font-weight: 500;
+}
+
+.btn-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  background-color: #faa61a;
+  overflow: hidden;
+}
+
+.btn-slide:active {
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.7);
+  -webkit-transform: scale(0.98);
+  transform: scale(0.96);
+}
+
+.btn-slide:hover {
+  @apply bg-green-500;
+}
+
+.btn-slide span.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: #fff;
+  color: black;
+  position: absolute;
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: all 2s ease;
+}
+
+.btn-slide:hover span.circle {
+  left: 100%;
+  margin-left: -45px;
+  background-color: #fff;
+  @apply text-green-400;
+}
+
+.btn-slide span.title {
+  transition: all 1.5s linear;
+  @apply font-semibold xxs:text-xs xxs:ml-4 text-[14px] sm:text-[15px] tracking-[1px] text-black
+}
+
+.btn-slide:hover span.title-hover {
+  opacity: 1;
+}
+
+@media only screen and(max-width: 540px) {
+  .btn-slide {
+    width: 240px;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .product-image{
+    width: calc(100vw - 100px);
+  }
+}
+/* pdp end*/
+
+/* mobile sticky bar start */
+.mobile-sticky-bar.full-width {
+  width: calc(100% - 25px);
+  transition: width 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-sticky-bar > *:not(:first-child) {
+  display: none;
+}
+
+.mobile-sticky-bar.full-width > *:not(:first-child) {
+  display: flex;
+}
+/* mobile sticky bar end */
