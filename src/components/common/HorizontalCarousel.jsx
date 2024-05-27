@@ -1,19 +1,19 @@
 "use client";
 import { useState } from "react";
 
-export default function Carousel({ images, isHover }) {
-  const [currentImage, setCurrentImage] = useState(0);
+export default function HorizontalCarousel({ slides, isHover }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   const selectSlide = (index) => {
-    setCurrentImage(index);
+    setCurrentSlide(index);
   };
 
   return (
@@ -21,17 +21,15 @@ export default function Carousel({ images, isHover }) {
       <div className="flex justify-center items-center gap-1 md:gap-20 md:flex-nowrap flex-wrap">
         <div className="md:w-1/2 w-full">
           <img
-            src={images[currentImage]}
+            src={slides[currentSlide].image}
             alt="carousel"
             className="h-[300px] object-contain m-auto"
           />
         </div>
         <div className="md:w-1/2 w-full">
-          <h2 className="mb-4 text-xl">Food as preventive pharmacy!</h2>
+          <h2 className="mb-4 text-xl">{slides[currentSlide].title}</h2>
           <p className="text-sm">
-            Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut
-            imperdiet eu, iaculis a sem. Donec vehicula luctus nunc in
-            laoreet...
+            {slides[currentSlide].description}
           </p>
         </div>
         {isHover && (
@@ -52,12 +50,12 @@ export default function Carousel({ images, isHover }) {
         )}
       </div>
       <div className="flex justify-center mt-4">
-        {images.map((_, index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => selectSlide(index)}
             className={`h-3 w-3 rounded-full mx-1.5 ${
-              currentImage === index
+              currentSlide === index
                 ? "border border-gray-800 bg-gray-800"
                 : "border border-gray-400"
             }`}

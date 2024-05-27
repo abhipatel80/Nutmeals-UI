@@ -1,7 +1,29 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const ProductDetails = () => {
+  const [count, setCount] = useState(1);
+
+  const handleChange = (e) => {
+    const value = parseInt(e.target.value, 10);
+    if (!isNaN(value) && value >= 1) {
+      setCount(value);
+    } else {
+      setCount(1);
+    }
+  };
+
+  const minusCount = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
+
+  const plusCount = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div className="lg:w-[42vw] xl:w-[38vw] flex justify-center items-center">
       <div className="border services-section lg:h-[74vh] overflow-auto bg-[#f5f5f5] border-gray-300 rounded-lg px-4 py-2 xs:px-8 xs:py-4">
@@ -12,13 +34,19 @@ const ProductDetails = () => {
 
         <div className="price-set flex justify-between items-center mt-2">
           <div className="incdec flex m-2">
-            <button className="text-3xl 2xl:!text-[50px]">-</button>
+            <button className="text-3xl 2xl:!text-[50px]" onClick={minusCount}>
+              -
+            </button>
             <input
               className="w-14 border border-black text-center rounded-lg mx-3 bg-[#f5f5f5]"
               type="text"
-              defaultValue={10}
+              value={count}
+              min={1}
+              onChange={handleChange}
             />
-            <button className="text-3xl 2xl:text-[40px]">+</button>
+            <button className="text-3xl 2xl:text-[40px]" onClick={plusCount}>
+              +
+            </button>
           </div>
           <div className="price text-[20px] 2xl:text-[25px]">100</div>
         </div>
@@ -42,7 +70,9 @@ const ProductDetails = () => {
         </div>
 
         <div className="detail-2 my-3 2xl:my-8">
-          <div className="text-[16px] sm:text-[19px] 2xl:text-[26px] text-green-500">variants</div>
+          <div className="text-[16px] sm:text-[19px] 2xl:text-[26px] text-green-500">
+            variants
+          </div>
           <div className="v1-button">
             <div className="w-full flex justify-start flex-wrap gap-x-12 gap-y-4 mt-1 2xl:mt-2 text-[15px] sm:text-[17px] 2xl:text-[24px]">
               <button className="text-[#faa61a]">plain roasted</button>
@@ -58,7 +88,9 @@ const ProductDetails = () => {
         </div>
 
         <div className="detail-3 my-3 2xl:my-8">
-          <div className="text-[16px] sm:text-[19px] 2xl:text-[26px] text-green-500">package</div>
+          <div className="text-[16px] sm:text-[19px] 2xl:text-[26px] text-green-500">
+            package
+          </div>
           <div className="flex text-[15px] sm:text-[17px] 2xl:text-[24px] justify-between flex-wrap mt-1 2xl:mt-2">
             <button>100 g</button>
             <button className="text-[#faa61a]">200 g</button>
