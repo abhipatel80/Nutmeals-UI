@@ -9,7 +9,7 @@ const ProductBenefits = ({ option1, option2, mainQuery }) => {
   const menuQuery = router.get("menu");
 
   return (
-    <div className="lg:w-[42vw] xl:w-[38vw] w-full lg:h-[74vh] product-scrollbar overflow-auto flex justify-center items-start border bg-[#f5f5f5] border-gray-300 rounded-lg">
+    <div className="lg:w-[42vw] xl:w-[38vw] w-full lg:h-[77vh] product-scrollbar overflow-auto flex justify-center items-start border bg-[#f5f5f5] border-gray-300 rounded-lg">
       <div className="w-full ">
         <div className="flex justify-evenly border-b">
           <Link

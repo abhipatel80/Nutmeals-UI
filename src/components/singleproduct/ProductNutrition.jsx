@@ -3,8 +3,8 @@ import React from "react";
 const ProductNutrition = () => {
   return (
     <>
-      <div className="nutrition w-full flex justify-center items-center -mt-2.5">
-        <fieldset className="lg:w-[42vw] xl:w-[38vw] product-image product-scrollbar lg:h-[75.5vh] overflow-auto w-full p-3 border border-gray-300 bg-[#f5f5f5] rounded-2xl px-4 py-2 xs:px-8 xs:py-4">
+      <div className="nutrition flex justify-center items-center -mt-2.5">
+        <fieldset className="lg:w-[42vw] xl:w-[38vw] product-image product-scrollbar 2xl:h-[77.5vh] lg:h-[78.5vh] overflow-auto w-[95vw] border border-gray-300 bg-[#f5f5f5] rounded-2xl px-4 py-2 xs:py-4">
           <legend className="w-fit m-auto px-4 text-lg 2xl:text-xl uppercase">
             Nutritional Facts
           </legend>
@@ -96,18 +96,18 @@ const ProductNutrition = () => {
                   <li>Iron</li>
                   <li>Potassium</li>
                 </div>
-                <div className="text-end ml-[97px] flex flex-col">
-                  <li>
-                    00 <span className="ml-3">mg</span>
+                <div className="text-end flex flex-col">
+                  <li className="ml-[70px] 2xl:ml-[80px]">
+                    00 <span className="ml-4">mg</span>
                   </li>
-                  <li>
-                    00 <span className="ml-3">mg</span>
+                  <li className="ml-[70px] 2xl:ml-[80px]">
+                    00 <span className="ml-4">mg</span>
                   </li>
-                  <li>
-                    00 <span className="ml-3">mg</span>
+                  <li className="ml-[70px] 2xl:ml-[80px]">
+                    00 <span className="ml-4">mg</span>
                   </li>
-                  <li>
-                    00 <span className="ml-3">mg</span>
+                  <li className="ml-[70px] 2xl:ml-[80px]">
+                    00 <span className="ml-4">mg</span>
                   </li>
                 </div>
                 <div className="text-end flex flex-col">

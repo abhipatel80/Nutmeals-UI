@@ -20,7 +20,7 @@ const ProductImage = () => {
   };
 
   return (
-    <div className="lg:w-[38vw] lg:h-[74vh] product-image flex flex-col pt-14 relative border bg-[#f5f5f5] border-gray-300 p-8 rounded-lg">
+    <div className="lg:w-[38vw] lg:h-[76.5vh] product-image flex flex-col pt-14 relative border bg-[#f5f5f5] border-gray-300 p-8 rounded-lg">
       <h1 className="text-effect !text-5xl xs:!text-7xl 2xl:!text-8xl absolute top-0 left-1/2 transform -translate-x-1/2 z-0">
         Peanuts
       </h1>

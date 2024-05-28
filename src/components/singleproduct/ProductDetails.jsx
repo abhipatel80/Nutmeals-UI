@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
   return (
     <div className="lg:w-[42vw] xl:w-[38vw] flex justify-center items-center">
-      <div className="border services-section lg:h-[74vh] overflow-auto bg-[#f5f5f5] border-gray-300 rounded-lg px-4 py-2 xs:px-8 xs:py-4">
+      <div className="border services-section lg:h-[77vh] overflow-auto bg-[#f5f5f5] border-gray-300 rounded-lg px-4 py-2 xs:px-8 xs:py-4">
         <div className="title text-[15px] xs:text-[18px] sm:text-[24px] lg:text-[20px] 2xl:text-[32px] flex">
           peanuts - <span>&nbsp;roasted & salted</span>
           <span className="ml-auto"> 200 g</span>

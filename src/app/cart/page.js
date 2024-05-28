@@ -7,7 +7,7 @@ import React from 'react'
 const Cart = () => {
     const router = usePathname();
     return (
-        <div>
+        <div className='mr-auto'>
             {!router.startsWith("/cart/order-placed")
                 &&
                 <div className="flex justify-start left-div items-center gap-0 sm:gap-3 4xl-md:gap-16 4xl-md:text-[20px] sm:mb-7 uppercase">
